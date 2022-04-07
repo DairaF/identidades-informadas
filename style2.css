@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Rubik",sans-serif;
+}
+body{
+    height: 100%;
+    background-color: #e6e6e6;
+}
+.containerLey{
+    width: 90vmin;
+    background-color: #ffffff;
+    padding: 50px 40px;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    border-radius: 5px;
+    box-shadow: 0 20px 35px rgba(60,60,60,0.2); 
+}
+.containerComment{
+    height: 100vmin;
+    width: 40vmin;
+    position: absolute;
+    top: 20%;
+    left: 70%;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper input{
+    width: 60%;
+    padding: 10px 5px;
+    border-radius: 3px;
+    border: 1px solid #201d2e;
+}
+.wrapper button{
+    width: 30%;
+    background-color: #201d2e;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #ffffff;
+    border-radius: 3px;
+}
+.container p{
+    line-height: 35px;
+    text-align: justify;
+    margin-top: 30px;
+}
+mark{
+    background-color: #ffdd4b;
+}
+.comentario{
+    background-color: white;
+    border: solid 2px #ffdd4b; 
+    position:relative; 
+    padding:1em;
+    border-radius: 5px;
+    box-shadow: 0 20px 35px rgba(60,60,60,0.2); 
+}
+label{
+    width: 100%;
+    display: block;
+}
+input{
+    width: 100%;
+    display: block;
+}
+header{
+    background-color: #201d2e;
+    color: white;
+    text-align: center;
+    padding: 2em;
+}
+mark[data-autor="fundar"]{
+    background-color: aquamarine;
+}
+.comentario[data-autor="fundar"]{
+    border: solid 2px aquamarine;
+    background-color: white;
+}
+
+mark[data-autor="am"]{
+    background-color: rgb(235, 111, 142);
+}
+.comentario[data-autor="am"]{
+    border: solid 2px rgb(136, 23, 51);
+    background-color: white;
+}
+
+mark[data-autor="ab"]{
+    background-color: rgb(222, 126, 225);
+}
+.comentario[data-autor="ab"]{
+    border: solid 2px rgb(183, 72, 186);
+    background-color: white;
+}
+
+
+.icon{
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
+    background-color: #ffdd4b;
+    text-align: center;
+}
+
