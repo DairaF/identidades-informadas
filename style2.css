@@ -8,58 +8,7 @@ body{
     height: 100%;
     background-color: #e6e6e6;
 }
-.containerLey{
-    width: 90vmin;
-    background-color: #ffffff;
-    padding: 50px 40px;
-    position: absolute;
-    top: 20%;
-    left: 10%;
-    border-radius: 5px;
-    box-shadow: 0 20px 35px rgba(60,60,60,0.2); 
-}
-.containerComment{
-    height: 100vmin;
-    width: 40vmin;
-    position: absolute;
-    top: 20%;
-    left: 70%;
-}
-.wrapper{
-    display: flex;
-    justify-content: space-between;
-}
-.wrapper input{
-    width: 60%;
-    padding: 10px 5px;
-    border-radius: 3px;
-    border: 1px solid #201d2e;
-}
-.wrapper button{
-    width: 30%;
-    background-color: #201d2e;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    color: #ffffff;
-    border-radius: 3px;
-}
-.container p{
-    line-height: 35px;
-    text-align: justify;
-    margin-top: 30px;
-}
-mark{
-    background-color: #ffdd4b;
-}
-.comentario{
-    background-color: white;
-    border: solid 2px #ffdd4b; 
-    position:relative; 
-    padding:1em;
-    border-radius: 5px;
-    box-shadow: 0 20px 35px rgba(60,60,60,0.2); 
-}
+
 label{
     width: 100%;
     display: block;
@@ -106,4 +55,82 @@ mark[data-autor="ab"]{
     background-color: #ffdd4b;
     text-align: center;
 }
+.containerLey{
+    width: 100vmin;
+    background-color: #ffffff;
+    padding: 50px 40px;
+    border-radius: 5px;
+    box-shadow: 0 20px 35px rgba(60,60,60,0.2); 
+}
+.containerComment{
+    display: hidden;
+}
+.sliderContainerComment{
+    position: fixed;
+    bottom: 0px;
+}
+.comentario{
+    display: none;
+}
+.displayComment{
+    display: block !important;
+}
+@media only screen and (min-width: 980px) {
+    .sliderContainerComment{
+        display: none;
+    }
+    .containerLey{
+        width: 90vmin;
+        background-color: #ffffff;
+        padding: 50px 40px;
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        border-radius: 5px;
+        box-shadow: 0 20px 35px rgba(60,60,60,0.2); 
+    }
+    .containerComment{
+        display: block;
+        height: 100vmin;
+        width: 40vmin;
+        position: absolute;
+        top: 20%;
+        left: 70%;
+    }
+    .wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    .wrapper input{
+        width: 60%;
+        padding: 10px 5px;
+        border-radius: 3px;
+        border: 1px solid #201d2e;
+    }
+    .wrapper button{
+        width: 30%;
+        background-color: #201d2e;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: #ffffff;
+        border-radius: 3px;
+    }
+    .container p{
+        line-height: 35px;
+        text-align: justify;
+        margin-top: 30px;
+    }
+    mark{
+        background-color: #ffdd4b;
+    }
+    .comentario{
+        background-color: white;
+        border: solid 2px #ffdd4b; 
+        position:relative; 
+        padding:1em;
+        border-radius: 5px;
+        box-shadow: 0 20px 35px rgba(60,60,60,0.2); 
+    }
 
+}
