@@ -1,10 +1,12 @@
+$('.slider').slick({
+  appendArrows: '#sliderControl',
+});
+
 
 function commentMatch(className){
   let topPos = document.getElementsByClassName(className)[0].offsetTop;
   document.getElementsByClassName(className)[1].style.top = topPos + "px";
 }
-// commentMatch("c1");
-// commentMatch("c2");
 
 const addFunction= () => {
   const marks = document.getElementsByTagName("MARK");
@@ -12,11 +14,27 @@ const addFunction= () => {
     marks[i].setAttribute('id',marks[i].className);
     marks[i].onmouseover =  () =>  bringForth(marks[i].className);
     marks[i].onmouseout =  () => bringBack(marks[i].className);  
-    marks[i].onclick =  () => displayHideComment(marks[i].className);  
+    marks[i].onclick =  () => displaySlider(i);  
+  //  marks[i].onclick =  () => displayHideComment(marks[i].className);  
   };
 }
-
 addFunction();
+
+function displaySlider (i) {
+    if(window.innerWidth < 980){
+    let slider = document.getElementById("slideContainer");
+    if(slider.className == "hide"){
+      slider.className="show";
+      $('.slider').slick('slickGoTo', i);
+    }else{ 
+      $('.slider').slick('slickGoTo', i);
+    }
+  }
+}
+function hideSlider(){
+  let slider = document.getElementById("slideContainer");
+  slider.className="hide";
+}
 function displayHideComment (classname) {
   let sameClass = document.getElementsByClassName(classname);
     sameClass[1].classList.toggle("displayComment");
