@@ -46,8 +46,6 @@ mark[data-autor="ab"]{
     border: solid 2px rgb(183, 72, 186);
     background-color: white;
 }
-
-
 .icon{
     border-radius: 50px;
     width: 20px;
@@ -75,9 +73,30 @@ mark[data-autor="ab"]{
 .displayComment{
     display: block !important;
 }
+.hide{
+    display:none !important
+}
+.show{
+    display: block !important;
+}
+.slide{
+    background-color:deepskyblue ;
+}
+/* slick-arrow
+slick-next 
+slick-prev */
+#slideContainer{
+    position: fixed;
+    width: 100%;
+    bottom: 0%;
+    background-color: white;
+}
 @media only screen and (min-width: 980px) {
     .sliderContainerComment{
         display: none;
+    }  
+    .comentario{
+        display: block;
     }
     .containerLey{
         width: 90vmin;
