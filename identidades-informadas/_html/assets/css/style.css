@@ -32,17 +32,19 @@
   font-display:auto;font-style:normal;font-weight:200;
   }
   
-  .tk-aktiv-grotesk { font-family: "aktiv-grotesk",sans-serif; } 
+.tk-aktiv-grotesk { font-family: "aktiv-grotesk",sans-serif; } 
   
 /* FUENTES */
 body{
   font-family:"aktiv-grotesk", sans-serif;
-    font-weight:normal;
-    margin:0 ;
-    padding: 0; 
-    overflow-x: hidden;
-		font-size:16px;
-  }
+  font-weight:normal;
+  margin:0 ;
+  padding: 0; 
+  overflow-x: hidden;
+	font-size:16px;
+}
+
+
 /* VARIABLES */
 :root{
     --rosa: #f8d3e6;
@@ -99,6 +101,7 @@ body{
     background-color: var(--gris);
 }
 
+
 /* gradiente de 4 colores y animacion */
 .bggrad4col {
     background: linear-gradient(299deg, #f8d3e6, #c9f4f6, #c5b6f7, #ffee8a);
@@ -139,13 +142,15 @@ body{
 /* CELESTE*/
 
 .bgCelOsc{
-    background-color: var(--celesteOsc);
+  background-color: var(--celesteOsc);
 }
 
 .bggradC {
 	background: rgb(255,255,255);
 	background: linear-gradient(143deg, rgba(255,255,255,1) 0%, rgba(201,244,246,1) 44%);
 }
+
+
 .bggradC.gradAnimado {
     background: linear-gradient(299deg, #ffffff, #c9f4f6);
     background-size: 400% 400%;
@@ -1218,6 +1223,7 @@ a.adicionales:hover:after {
 a.adicionales:last-child {
 	border-bottom:0;
 } 
+
 }
 
 @media screen and (max-width: 580px) {	
@@ -1416,15 +1422,12 @@ ul.tabs.tabs_light li.active {
     transition: 0.3s all;
 }  
 
+}
 /*---------------------
  FOOTER 
 -----------------------*/
- 
 
 
-/*---------------------
- FOOTER 
------------------------*/
 footer{
     background-color: #231f20;
 		padding:20px;
