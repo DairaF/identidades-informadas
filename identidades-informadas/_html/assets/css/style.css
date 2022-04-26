@@ -1400,17 +1400,7 @@ ul.tabs.tabs_light li.active {
 			transition: all 0.3s ease;
 }
 	
-/*   .tab_drawer_heading:hover {
-   background:transparent;
-     color: var(--lilaOsc);
-  }
-
-  .d_active {
-     background: var(--lilaOsc);
-     color: #fff;
-  } */
-	
-	 
+ 
 		.tab_drawer_heading:hover:after,
 		.tab_drawer_heading.d_active:after {
     content: '';
