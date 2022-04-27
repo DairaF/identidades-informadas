@@ -1408,8 +1408,8 @@ ul.tabs.tabs_light li.active {
 }
 	
  
-		.tab_drawer_heading:hover:after,
-		.tab_drawer_heading.d_active:after {
+.tab_drawer_heading:hover:after,
+.tab_drawer_heading.d_active:after {
     content: '';
     position: absolute;
     top: 20px;
@@ -1423,6 +1423,101 @@ ul.tabs.tabs_light li.active {
 }  
 
 }
+
+
+
+
+/*---------------------
+ GLOSARIO 
+-----------------------*/
+
+
+ul.letters a{
+	color:var(--amarilloOsc);
+		font-family:"aktiv-grotesk-medium";
+
+	
+}
+ul.letters li{
+	padding-bottom:5px;
+	
+}
+
+.glosario li h3{
+	color:var(--amarilloOsc);
+	font-family:"aktiv-grotesk-medium";
+	margin-bottom:30px;
+}
+
+
+.glosario li h4,
+.glosario li p{
+	color:var(--blanco); 
+	font-family:"aktiv-grotesk-light";
+}
+
+
+
+.contieneGlosario {
+	width:100%;
+	height:100%;
+	max-height:760px;
+	position:relative;
+	overflow-y: auto;
+}
+
+.glosario {
+	width:100%;
+	height:100%;
+ 
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  .contieneGlosario {
+    scrollbar-width: auto;
+    scrollbar-color: #ffffff #151515;
+  }
+
+  /* Chrome, Edge, and Safari */
+  .contieneGlosario::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .contieneGlosario::-webkit-scrollbar-track {
+    background: #151515;
+  }
+
+  .contieneGlosario::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 3px solid #151515;
+  }
+
+
+@media screen and (max-width: 991px) {
+
+ul.letters {
+	padding:20px 10px!important;
+	background:var(--amarilloOsc);
+	border-radius:0 10px 10px 0;
+}
+
+
+ul.letters a{
+	color:var(--gris);
+		font-family:"aktiv-grotesk-bold";
+
+}
+
+ul.letters li{
+	padding-bottom:5px;
+text-align: center;
+}
+	
+}
+
+
 /*---------------------
  FOOTER 
 -----------------------*/
