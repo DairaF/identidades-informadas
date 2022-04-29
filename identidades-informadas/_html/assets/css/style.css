@@ -1593,11 +1593,20 @@ footer .form-control::-ms-input-placeholder { /* Microsoft Edge */
   color: white;
 }
 
+footer .ajusta-desk {
+	margin-top:-30px;
+}
+
 
 @media screen and (max-width: 991px) {
 	footer{
  		padding:0px; 
 	}	
+	
+	footer .ajusta-desk {
+		margin-top:0px;
+	}
+
 }
 
 /* FOOTER */
