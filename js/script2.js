@@ -1,6 +1,30 @@
-$('.slider').slick({
-  appendArrows: '#sliderControl',
-});
+ 
+
+var $slider = $('.slider');
+
+if ($slider.length) {
+  var currentSlide;
+  var slidesCount;
+  var sliderCounter = document.createElement('div');
+  sliderCounter.classList.add('slider__counter');
+  
+  var updateSliderCounter = function(slick, currentIndex) {
+    currentSlide = slick.slickCurrentSlide() + 1;
+    slidesCount = slick.slideCount;
+    $(sliderCounter).text(currentSlide + ' de ' +slidesCount)
+  };
+
+  $slider.on('init', function(event, slick) {
+    $slider.append(sliderCounter);
+    updateSliderCounter(slick);
+  });
+
+  $slider.on('afterChange', function(event, slick, currentSlide) {
+    updateSliderCounter(slick, currentSlide);
+  });
+
+  $slider.slick({appendArrows: '#sliderControl'});
+}
 
 
 function commentMatch(className){
@@ -42,13 +66,29 @@ function displayHideComment (classname) {
 function bringForth (classname) {
   let sameClass = document.getElementsByClassName(classname);
     sameClass[1].style.zIndex = 500;
-    sameClass[1].style.marginLeft = "-10px";
-    sameClass[1].style.marginRight = "-10px";
+    sameClass[1].style.left = "-30px";
+    //sameClass[1].style.marginRight = "0px";
 }
 function bringBack (classname) {
   let sameClass = document.getElementsByClassName(classname);
     sameClass[1].style.zIndex = 0;
-    sameClass[1].style.marginLeft = "0px";
-    sameClass[1].style.marginRight = "0px";
+    sameClass[1].style.left = "0px";
+    //sameClass[1].style.marginRight = "0px";
 
 }
+
+ 
+ 
+ /*STICKY SIDEBAR*/
+ var div_top = $('.sidebar').offset().top;
+
+$(window).scroll(function() {
+    var window_top = $(window).scrollTop() - 0;
+    if (window_top > div_top) {
+        if (!$('.sidebar').is('.sticky')) {
+            $('.sidebar').addClass('sticky');
+        }
+    } else {
+        $('.sidebar').removeClass('sticky');
+    }
+});
