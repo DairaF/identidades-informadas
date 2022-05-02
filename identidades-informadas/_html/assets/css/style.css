@@ -1248,7 +1248,7 @@ a.adicionales:last-child {
 
 
 .navbar-hoja.sticky {
-    position: fixed;
+    position: sticky;
     top: 0; 
 		max-width:306px;
 }
