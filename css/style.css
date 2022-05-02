@@ -122,14 +122,12 @@ i {
  
 @media screen and (max-width: 991px) {
 	#site-header {
-		border-bottom:2px solid #231f20;
+		border-bottom:1px solid #e6e7e8;
+		margin-bottom:20px
 	}
 	
 }
-
-
-
-
+ 
 label{
     width: 100%;
     display: block;
@@ -140,13 +138,15 @@ input{
 }
 
 
-
+    mark{
+        background-color: #ffdd4b;
+    }
 
 mark[data-autor="fundar"]{
-    background-color: aquamarine;
+    background-color: #8d9bff;
 }
 /* .comentario[data-autor="fundar"]{
-    border: solid 2px aquamarine;
+    border: solid 2px #8d9bff;
     background-color: white;
 } */
 
@@ -178,6 +178,9 @@ mark[data-autor="ab"]{
 		overflow:hidden;
 }
 
+[data-autor="fundar"] .icon {
+  background-color: #8d9bff;
+}
 
 .containerLey{
     width: 100vmin;
@@ -206,28 +209,124 @@ mark[data-autor="ab"]{
     display: block !important;
 }
 
+.sidebar.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
 
+aside,
+aside .sidebar{
+		width:100%;
+		background:#f7f5f5;
+}
+
+
+.btn {
+	border:0;
+/* 	border-top:1px solid black; */
+	border-bottom:1px solid black;
+	background:transparent;
+	padding:10px;
+	border-radius:0;
+	width:100%;
+	text-align:left;
+		font-family:"aktiv-grotesk-medium";
+	font-size:14px;	
+
+} 
+
+.dropdown-menu {
+    width: 100%;
+    min-width: auto;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 8px 20px;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+
+
+/*-----------------------------------------
+
+	slider
+	
+---------------------------------------------*/
 .hide{
     display:none !important
 }
 .show{
     display: block !important;
 }
-.slide{
-    background-color:deepskyblue ;
+
+.slider{
+	padding:10px;
 }
 
-
-/* slick-arrow
-slick-next 
-slick-prev */
+.slide{
+    background-color:#f7f5f5 ;
+		text-decoration:none!important;
+		color:#000;
+}
+ .slide .icon{
+	 margin-bottom:10px;
+ }
+ 
 #slideContainer{
     position: fixed;
     width: 100%;
     bottom: 0%;
-    background-color: white;
+    background-color: #f7f5f5;
+	border-top:4px solid #e6e7e8;	
 }
 
+
+#sliderControl { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+ 
+
+.sliderButtons {
+	position:relative;
+	padding:10px;
+		border-bottom:1px solid #e6e7e8;	
+
+}
+.closeSlider {
+	width:30px;
+	height:30px;
+	position:absolute;
+	right:10px;
+	top:10px;
+}
+
+.slider__counter {
+	color:#a7a9ac;
+	font-size:14px;
+}
+
+	
+
+/*------------------------
+DESK
+--------------------------*/
 
 @media only screen and (min-width: 992px) {
 
@@ -243,10 +342,11 @@ h1 {
 		flex-wrap:wrap;
 	}
 
-	aside{
+aside{
 		width:150px;
 		background:#a8a8d4;
-	}
+}
+	
 section.content {
     width: calc(100% - 150px);
     position: relative;
@@ -281,22 +381,20 @@ section.content {
         display: block;
         height: 100vmin;
         width: 380px;
-        position: absolute;
-        top: 0%;
-        left: calc(100% - 400px);
+        position: relative;
+        /* top: 0%;
+        left: calc(100% - 400px); */
     } 
 		
     .containerLey p{
       text-align: justify;
     }
 		
-    mark{
-        background-color: #ffdd4b;
-    }
+
 		
 		
    .comentario {
-			background-color: white;
+			 opacity:0.5;
 			border: solid 5px #e6e7e8;
 			position: relative;
 			padding: 15px;
@@ -304,8 +402,9 @@ section.content {
 			transition: 0.4s all;
 			margin-bottom: 10px;
 		}
-
-
+.comentario:first-child {
+			 opacity:1;
+}
 
 
 .dropdown-menu.show {
@@ -315,49 +414,14 @@ section.content {
 }
 
 
-
-
-}
 .sidebar.sticky {
     position: fixed;
     top: 0;
     width: 150px;
 }
 
-.btn {
-	border:0;
-/* 	border-top:1px solid black; */
-	border-bottom:1px solid black;
-	background:transparent;
-	padding:10px;
-	border-radius:0;
-	width:100%;
-	text-align:left;
-} 
-
-.dropdown-menu {
-    width: 100%;
-    min-width: auto;
-    background: transparent;
-    border: 0;
-    border-radius: 0;
-    font-size: 14px;
-    padding: 10px 0;
 }
 
-.dropdown-item {
-    display: block;
-    width: 100%;
-    padding: 8px 20px;
-    clear: both;
-    font-weight: 400;
-    color: #212529;
-    text-align: inherit;
-    text-decoration: none;
-    white-space: nowrap;
-    background-color: transparent;
-    border: 0;
-}
 
 
 
