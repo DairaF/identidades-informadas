@@ -40,6 +40,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box; 
+
 } 
 
 body{
@@ -53,14 +54,36 @@ body{
 	height: 100%;
 	background:#f7f5f5;
 } 
-
-
+button,
+button:focus,
+textarea:focus, 
+textarea.form-control:focus, 
+input.form-control:focus, 
+input[type=text]:focus, 
+input[type=password]:focus, 
+input[type=email]:focus, 
+input[type=number]:focus, 
+[type=text].form-control:focus, 
+[type=password].form-control:focus, 
+[type=email].form-control:focus, 
+[type=tel].form-control:focus, 
+[contenteditable].form-control:focus {
+		-moz-box-shadow: none;
+-goog-ms-box-shadow: none;
+-webkit-box-shadow: none;
+box-shadow: none;
+ outline: none;
+ outline: none;
+box-shadow:none !important;
+}
+ 
 /*------------------
  texto
 -------------------- */
 
 h4{
-	font-size:18px;
+font-size: 16px;
+    line-height: 1.5;
 }
 
 
@@ -185,7 +208,7 @@ mark[data-autor="ab"]{
 .containerLey{
     width: 100vmin;
     background-color: #ffffff;
-    padding: 50px 40px; 
+    padding: 50px 20px; 
 }
 
 
@@ -239,7 +262,7 @@ aside .sidebar{
 .dropdown-menu {
     width: 100%;
     min-width: auto;
-    background: transparent;
+    background: #f7f5f5;
     border: 0;
     border-radius: 0;
     font-size: 14px;
@@ -260,6 +283,16 @@ aside .sidebar{
     border: 0;
 }
 
+.agrupaDrop {
+	display:flex;
+	flex-wrap:wrap;
+}
+
+.agrupaDrop .dropdownArt,
+.agrupaDrop .dropdownReacciones{
+	
+	width:50%;
+}
 
 /*-----------------------------------------
 
@@ -321,8 +354,44 @@ aside .sidebar{
 	color:#a7a9ac;
 	font-size:14px;
 }
+.autores{
+	padding:10px;
+	margin:0;
+}
 
-	
+.autores li {
+	display:flex;
+	margin-right:10px;
+	align-items:center;
+}	
+.autores li .icon{
+	margin:0 10px 10px 0;
+}	
+
+/*reacciones*/
+.reacciones li{
+	    display: flex;
+    justify-content: space-between;
+		padding:10px 0;
+		border-bottom:1px solid #1d1d1b
+}
+
+.reaccionesControl{
+	display:flex;
+	align-items:center;
+}
+
+.reaccionesControl button{
+	width:30%;
+	border-radius:100%;
+	background:transparent;
+	border:0;
+	box-shadow:none;
+	-moz-box-shadow: none;
+-goog-ms-box-shadow: none;
+-webkit-box-shadow: none;
+box-shadow: none;
+}
 
 /*------------------------
 DESK
@@ -334,6 +403,11 @@ h1 {
 	font-size:48px;
 	margin-bottom:40px;
 }
+h4{
+font-size: 18px;
+    line-height: 1.5;
+}
+
 	#main {
 		position:relative;
 		padding:30px;
@@ -344,7 +418,6 @@ h1 {
 
 aside{
 		width:150px;
-		background:#a8a8d4;
 }
 	
 section.content {
@@ -354,6 +427,12 @@ section.content {
     display: flex;
     justify-content: space-between;
 }
+
+
+.autores li {
+	flex-direction:column;
+	align-items:flex-start;
+}	
 
 	.intro{
 		width:calc(100% - 750px);
@@ -394,13 +473,14 @@ section.content {
 		
 		
    .comentario {
-			 opacity:0.5;
+			 opacity:1;
 			border: solid 5px #e6e7e8;
 			position: relative;
 			padding: 15px;
 			border-radius: 15px;
 			transition: 0.4s all;
 			margin-bottom: 10px;
+			background:#f7f5f5;
 		}
 .comentario:first-child {
 			 opacity:1;
@@ -419,6 +499,17 @@ section.content {
     top: 0;
     width: 150px;
 }
+
+.agrupaDrop {
+	display:block;
+}
+
+.agrupaDrop .dropdownArt,
+.agrupaDrop .dropdownReacciones{
+	display:block;
+	width:100%;
+}
+
 
 }
 

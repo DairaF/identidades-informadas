@@ -59,23 +59,26 @@
 	<aside class="">
 	<div class="sidebar">
 	
-		<div class="dropdown">
+		<div class="dropdown d-none d-lg-block">
 		 <button class="btn dropdown-toggle" type="button" id="dropdownComentada" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
 				Comentada por:
 			</button>
 
-			<ul class="dropdown-menu" aria-labelledby="dropdownComentada">
-				<li class=""><div class="icon">F</div> Fundar</li> 
-				<li><div class="icon">AM</div> Aluminé Moreno</li> 
-				<li><div class="icon">MW</div> Marlene Wayar</li> 
+			<ul class="dropdown-menu autores" aria-labelledby="dropdownComentada">
+				<li data-autor="fundar"><div class="icon">F</div> Fundar</li> 
 			</ul>
 		</div>
 		
+		<div class="d-block d-lg-none">
+			<ul class="autores">
+				<li data-autor="fundar"><div class="icon">F</div> Fundar</li> 
+			</ul>
+		</div>
  	
 		
  
-
-		<div class="dropdown">
+		<div class="agrupaDrop">
+		<div class="dropdown dropdownArt">
 		 <button class="btn dropdown-toggle" type="button" id="dropdownArt" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
 				Articulos
 			</button>
@@ -92,17 +95,40 @@
 			</ul>
 		</div>	
  
-		<div class="dropdown">
+		<div class="dropdown dropdownReacciones">
 		 <button class="btn dropdown-toggle" type="button" id="dropdownReacciones" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
 				Reacciones
 			</button>
 
-			<ul class="dropdown-menu" aria-labelledby="dropdownReacciones">
-				<li><img src="img/100.png"></li>
-				<li><img src="img/redflag.png"></li>
-			</ul>
+			<ul class="dropdown-menu reacciones" aria-labelledby="dropdownReacciones">
+				
+				<li>
+					<div class="">
+						<img src="img/100.png" width="30">
+					</div>
+					<div class="reaccionesControl">
+						<button><img src="img/control-prev.png" class="img-fluid"/></button>
+						<div class="count">1 de 4</div>
+						<button><img src="img/control-next.png" class="img-fluid"/></button>
+					</div>
+				</li>
+				<li>
+					<div class="">
+						<img src="img/redflag.png" width="30">
+					</div>
+					<div class="reaccionesControl">
+						<button><img src="img/control-prev.png" class="img-fluid"/></button>
+						<div class="count">1 de 4</div>
+						<button><img src="img/control-next.png" class="img-fluid"/></button>
+					</div>
+				</li>
+				
+				
+				
+ 			</ul>
 		</div>	
 		
+		</div>
 		
 	</div>	
 	</aside>	
@@ -119,6 +145,8 @@
         
         <p>c) <mark data-autor="fundar" class="c2"> A ser tratada de acuerdo con su identidad de género</mark> y, en particular, a ser identificada de ese modo en los instrumentos que acreditan su identidad respecto de el/los nombre/s de pila, imagen y sexo con los que allí es registrada.</p>
         <br>
+        <p><strong id="art3">ARTICULO 3º</strong></p>
+        <br>  
         <p><strong id="art2">ARTICULO 2º</strong> — Definición. Se entiende por <mark class="c3" data-autor="fundar">identidad de género a la vivencia interna e individual del género</mark> tal como cada persona la siente, la cual  puede corresponder o no con el sexo asignado al momento del nacimiento, incluyendo la vivencia personal del cuerpo. Esto puede involucrar la modificación de la apariencia o la función corporal a través de medios farmacológicos, quirúrgicos o de otra índole, siempre que ello sea libremente escogido. También incluye otras expresiones de género, como la vestimenta, el modo de hablar y los modales.</p>
         <br>       
         <p><strong id="art4">ARTICULO 4º</strong> — Requisitos. Toda persona que solicite la rectificación registral del sexo, el cambio de nombre de pila e imagen, en virtud de la presente ley, deberá observar los siguientes requisitos:</p>

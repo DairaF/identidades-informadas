@@ -81,7 +81,7 @@ function bringForth (classname) {
     sameClass[1].style.left = "-60px";
     sameClass[1].style.position = "absolute";
     sameClass[1].style.backgroundColor = "#fff";
-		sameClass[1].style.opacity = "1";
+		//sameClass[1].style.opacity = "1";
 
 }
 
@@ -90,8 +90,8 @@ function bringBack (classname) {
     sameClass[1].style.zIndex = 0;
     sameClass[1].style.left = "0px";
     sameClass[1].style.position = "relative";
-		sameClass[1].style.backgroundColor = "transparent";
-		sameClass[1].style.opacity = "0";
+		sameClass[1].style.backgroundColor = "#f7f5f5";
+		//sameClass[1].style.opacity = "0";
 		
 }
 
