@@ -161,9 +161,10 @@ input{
 }
 
 
-    mark{
-        background-color: #ffdd4b;
-    }
+mark{
+		background-color: #ffdd4b;
+		cursor:pointer;
+}
 
 mark[data-autor="fundar"]{
     background-color: #8d9bff;
@@ -190,6 +191,15 @@ mark[data-autor="ab"]{
     background-color: white;
 } */
 
+.autor-name{
+	margin-bottom:10px;
+	display:flex;
+	align-items:center;
+}
+
+.autor-name span {
+	font-family:"aktiv-grotesk-medium";
+}
 
 .icon{
     border-radius:100%;
@@ -199,6 +209,7 @@ mark[data-autor="ab"]{
     background-color: #ffdd4b;
     text-align: center;
 		overflow:hidden;
+		margin-right:10px;
 }
 
 [data-autor="fundar"] .icon {
@@ -269,7 +280,7 @@ aside .sidebar{
     padding: 10px 0;
 }
 
-.dropdown-item {
+.nav-item {
     display: block;
     width: 100%;
     padding: 8px 20px;
@@ -283,6 +294,12 @@ aside .sidebar{
     border: 0;
 }
 
+.nav-item:hover,
+.nav-item:focus {
+	color:#000;
+}
+
+
 .agrupaDrop {
 	display:flex;
 	flex-wrap:wrap;
@@ -292,6 +309,12 @@ aside .sidebar{
 .agrupaDrop .dropdownReacciones{
 	
 	width:50%;
+}
+
+.navbar-toggler { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /*-----------------------------------------
@@ -314,6 +337,10 @@ aside .sidebar{
     background-color:#f7f5f5 ;
 		text-decoration:none!important;
 		color:#000;
+}
+.slide:hover,
+.slide:focus {
+	color:#000;
 }
  .slide .icon{
 	 margin-bottom:10px;
@@ -481,6 +508,7 @@ section.content {
 			transition: 0.4s all;
 			margin-bottom: 10px;
 			background:#f7f5f5;
+			width:100%;
 			left:0;
 		}
 .comentario:first-child {
@@ -492,6 +520,40 @@ section.content {
 	background:#fff;
 	left:-60px;
 }
+
+
+
+.arrow_box {
+	position: relative;
+	background: #ffffff;
+	border: 4px solid #e6e7e8;
+}
+.comentario.visible:after, 
+.comentario.visible:before {
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.comentario.visible:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: #ffffff;
+	border-width: 15px;
+	margin-top: -15px;
+}
+.comentario.visible:before {
+	border-color: rgba(230, 231, 232, 0);
+	border-right-color: #e6e7e8;
+	border-width: 21px;
+	margin-top: -21px;
+}
+
+
 
 
 .dropdown-menu.show {
