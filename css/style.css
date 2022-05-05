@@ -96,7 +96,9 @@ i {
     font-style: italic;
 }
 
-
+p {
+	font-size:18px;
+}
 /*------------------
  HEDEAR
 -------------------- */
@@ -163,7 +165,7 @@ input{
 
 mark{
 		background-color: #ffdd4b;
-		cursor:pointer;
+		cursor:context-menu;
 }
 
 mark[data-autor="fundar"]{
@@ -226,7 +228,7 @@ mark[data-autor="ab"]{
     padding: 50px 20px; 
 }
 .containerLey p{
- font-size: 21px;
+ font-size: 22px;
  font-family: 'Crimson Pro', serif;
     }
 
@@ -290,7 +292,7 @@ aside .sidebar{
 .nav-item {
     display: block;
     width: 100%;
-    padding: 8px 5px;
+    padding: 8px 0px;
     clear: both;
     font-weight: 400;
     color: #212529;
@@ -303,7 +305,8 @@ aside .sidebar{
 
 .nav-item:hover,
 .nav-item:focus {
-	color:#000;
+	color:#8d9bff;
+	text-decoration:none;
 }
 
 
@@ -322,6 +325,10 @@ aside .sidebar{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.navbar-collapse { 
+    align-items: flex-start;
 }
 
 /*-----------------------------------------
@@ -540,7 +547,9 @@ section.content {
 	left:-60px;
 }
 
-
+.comentario p {
+	font-size:16px;
+}
 
 .arrow_box {
 	position: relative;
@@ -634,34 +643,5 @@ display:none;
   align-items: flex-end;
 	
 }
-
-
  
-
- 
-@keyframes square {
-  0% {
-    transform: translate(0%, 0%) rotate(0deg);
-  }
-  100% {
-    transform: translate(1100%, -900%) rotate(180deg);
-  }
-}
-
-@keyframes circle {
-  0% {
-    transform: translate(0%, 0%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-700%, -700%);
-  }
-}
-
-@keyframes triangle {
-  0% {
-    transform: translate(0%, 0%) rotate(0deg);
-  }
-  100% {
-    transform: translate(0%, -1000%) rotate(180deg);
-  }
-}
+.animado1 mark, .animado2 mark { cursor:pointer;}
