@@ -47,7 +47,7 @@ const addFunction= () => {
   for (let i = 0; i < marks.length; i++ ) {
     marks[i].setAttribute('id',marks[i].className);
     marks[i].onmouseover =  () =>  bringForth(marks[i].className), commentMatch(marks[i].className);
-     marks[i].onclick =  () => displaySlider(i);  
+    marks[i].onclick =  () => displaySlider(i);  
   //  marks[i].onclick =  () => displayHideComment(marks[i].className);  
   };
 }
@@ -107,8 +107,6 @@ function bringBack (classname) {
 		sameClass[1].classList.remove('visible');  
     sameClass[1].style.left = "0px";
 		sameClass[1].style.backgroundColor = "#f7f5f5";
-
-		
 }
  
  
@@ -128,7 +126,7 @@ $(window).scroll(function() {
 });
 
  
- 	 /*STICKY MENU*/
+ 	 /*  MENU*/
 $(function(){	 
   if(window.innerWidth < 980){
 				const navLinks = document.querySelectorAll('.nav-item')

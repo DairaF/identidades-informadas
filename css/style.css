@@ -169,7 +169,7 @@ mark{
 }
 
 mark[data-autor="fundar"]{
-    background-color: #c9cfff;
+    background-color: #dde1ff;
 }
 
 mark[data-autor="fundar"].highLight{
@@ -219,7 +219,9 @@ mark[data-autor="ab"]{
 }
 
 [data-autor="fundar"] .icon {
-  background-color: #8d9bff;
+    background-color: #fff;
+    border: 1px solid black;
+    padding: 0 5px;
 }
 
 .containerLey{
@@ -549,6 +551,18 @@ section.content {
 
 .comentario p {
 	font-size:16px;
+}
+
+
+.cierra-comentario {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border: 0;
+		background:url("../img/control-close.png") center no-repeat transparent;
+		background-size:contain;
 }
 
 .arrow_box {
