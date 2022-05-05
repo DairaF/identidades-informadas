@@ -36,17 +36,18 @@ if ($slider.length) {
 
 function commentMatch(className){
   let topPos = document.getElementsByClassName(className)[0].offsetTop;
-  document.getElementsByClassName(className)[1].style.top = topPos + "px";
+	let altoPos = document.getElementsByClassName(className)[1].offsetHeight;
+  document.getElementsByClassName(className)[1].style.top = topPos - altoPos/2 + "px";
 }
- 
 
+
+ 
 const addFunction= () => {
   const marks = document.getElementsByTagName("MARK");
   for (let i = 0; i < marks.length; i++ ) {
     marks[i].setAttribute('id',marks[i].className);
     marks[i].onmouseover =  () =>  bringForth(marks[i].className), commentMatch(marks[i].className);
-   // marks[i].onmouseout =  () => bringBack(marks[i].className);  
-    marks[i].onclick =  () => displaySlider(i);  
+     marks[i].onclick =  () => displaySlider(i);  
   //  marks[i].onclick =  () => displayHideComment(marks[i].className);  
   };
 }
@@ -71,33 +72,42 @@ function hideSlider(){
   slider.className="hide";
 }
 
+
 function displayHideComment (classname) {
   let sameClass = document.getElementsByClassName(classname);
     sameClass[1].classList.toggle("displayComment");
 }
 
+
+
 function bringForth (classname) {
+	
   let sameClass = document.getElementsByClassName(classname);
   let visible = document.getElementsByClassName('visible');
 		if (visible.length >= 1) {
 			visible[0].classList.remove('visible')		
 		}
+	 
 		sameClass[1].classList.add('visible');
- 
 		sameClass[1].style.opacity = "1";
-
+		
+	let highLight= document.getElementsByClassName('highLight');
+		if (highLight.length >= 1) {
+			highLight[0].classList.remove('highLight');    
+		}
+		sameClass[0].classList.add('highLight');
 }
+
+ 
 
 
  
 function bringBack (classname) {
   let sameClass = document.getElementsByClassName(classname);
 		sameClass[1].classList.remove('visible');  
-
     sameClass[1].style.left = "0px";
-    //sameClass[1].style.position = "relative";
 		sameClass[1].style.backgroundColor = "#f7f5f5";
-		//sameClass[1].style.opacity = "0";
+
 		
 }
  
@@ -117,7 +127,7 @@ $(window).scroll(function() {
     }
 });
 
-
+ 
  	 /*STICKY MENU*/
 $(function(){	 
   if(window.innerWidth < 980){
@@ -145,6 +155,26 @@ $(window).scroll(function() {
 });
 
 
-$('.menu-hoja').click(function(e) {
-    e.stopPropagation();
+
+
+
+
+
+let animado = document.querySelector(".animado");
+let subContainer = document.querySelector(".animacion100");
+
+animado.addEventListener("click", () => {
+  subContainer.classList.add("startConfetti");
+  setTimeout(() => subContainer.classList.remove("startConfetti"), 1500);
 });
+
+
+
+let animado2 = document.querySelector(".animado2");
+let subContainer2 = document.querySelector(".animacionBandera");
+
+animado2.addEventListener("click", () => {
+  subContainer2.classList.add("startConfetti");
+  setTimeout(() => subContainer2.classList.remove("startConfetti"), 1500);
+});
+
