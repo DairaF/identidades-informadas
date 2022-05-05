@@ -154,27 +154,21 @@ $(window).scroll(function() {
     }
 });
 
-
-
-
-
-
-
-let animado = document.querySelector(".animado");
-let subContainer = document.querySelector(".animacion100");
-
-animado.addEventListener("click", () => {
-  subContainer.classList.add("startConfetti");
-  setTimeout(() => subContainer.classList.remove("startConfetti"), 1500);
+$('.menu-hoja').click(function(e) {
+    e.stopPropagation();
 });
 
 
-
-let animado2 = document.querySelector(".animado2");
-let subContainer2 = document.querySelector(".animacionBandera");
-
-animado2.addEventListener("click", () => {
-  subContainer2.classList.add("startConfetti");
-  setTimeout(() => subContainer2.classList.remove("startConfetti"), 1500);
-});
-
+const confettiAnim = (subCon,anim) =>{
+  let subContainer = document.getElementsByClassName(subCon)[0];
+  subContainer.classList.add(anim);
+  setTimeout(() => subContainer.classList.remove(anim), 1500);
+}
+const addAnim= (mark, subCon, anim) => {
+  let animado = document.getElementsByClassName(mark);
+  for (let i = 0; i < animado.length; i++ ) {
+    animado[i].onclick =  () => confettiAnim(subCon,anim);
+  };
+}
+addAnim("animado2","animacionBandera","startConfetti");
+addAnim("animado1","animacion100","startConfetti");
