@@ -170,3 +170,20 @@ const addAnim= (mark, subCon, anim) => {
 }
 addAnim("animado2","animacionBandera","startConfetti");
 addAnim("animado1","animacion100","startConfetti");
+
+
+
+
+
+
+function registerClickHandler (e) {
+  // Implement the click handler here for button of class 'remove'
+  var target = e.target;
+  target.parentNode.parentNode.removeChild(target.parentNode);
+}
+
+var removeBtn = document.querySelectorAll('.cierra-comentario');
+
+for (var i = 0 ; i < removeBtn.length; i++) {
+   removeBtn[i].addEventListener("click", registerClickHandler, false); 
+}
