@@ -17,8 +17,6 @@ if ($slider.length) {
   
   var updateSliderCounter = function(slick, currentIndex) {
     window.location.hash="#c"+(currentIndex);
-    // document.getElementById('nextA').href = "#c"+(currentIndex+1);
-    // document.getElementById('prevA').href = "#c"+(currentIndex-1);
     currentSlide = slick.slickCurrentSlide() + 1;
     slidesCount = slick.slideCount;
     $(sliderCounter).text(currentSlide + ' de ' +slidesCount)
@@ -58,6 +56,7 @@ addFunction();
 
 
 function displaySlider (i) {
+  document.getElementById('slideContainer').classList.remove('hide');
     if(window.innerWidth < 980){
     let slider = document.getElementById("slideContainer");
     if(slider.className == "hide"){
