@@ -543,11 +543,17 @@ section.content {
 		}
  
 
-.comentario.visible {
-	z-index:100;
-	background:#fff;
-	left:-60px;
-}
+		.comentario.visible {
+			z-index:100;
+			background:#fff;
+			left:-60px;
+			opacity:1;
+		}
+
+
+   .comentario.cierra{
+		 opacity:0;
+	 }
 
 .comentario p {
 	font-size:16px;

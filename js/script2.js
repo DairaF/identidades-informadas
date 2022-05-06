@@ -83,13 +83,15 @@ function displayHideComment (classname) {
 function bringForth (classname) {
 	
   let sameClass = document.getElementsByClassName(classname);
-  let visible = document.getElementsByClassName('visible');
+  
+	let visible = document.getElementsByClassName('visible');
 		if (visible.length >= 1) {
 			visible[0].classList.remove('visible')		
 		}
 	 
 		sameClass[1].classList.add('visible');
-		sameClass[1].style.opacity = "1";
+		//sameClass[1].style.opacity = "1";
+		
 		
 	let highLight= document.getElementsByClassName('highLight');
 		if (highLight.length >= 1) {
@@ -173,17 +175,16 @@ addAnim("animado1","animacion100","startConfetti");
 
 
 
+ 
 
+     
+		
+    
+   $('.cierra-comentario').on('click', function(e) {           
+        $(this).parent().addClass('cierra');            
+    });    
+		
+ 
+ 
 
-
-function registerClickHandler (e) {
-  // Implement the click handler here for button of class 'remove'
-  var target = e.target;
-  target.parentNode.parentNode.removeChild(target.parentNode);
-}
-
-var removeBtn = document.querySelectorAll('.cierra-comentario');
-
-for (var i = 0 ; i < removeBtn.length; i++) {
-   removeBtn[i].addEventListener("click", registerClickHandler, false); 
-}
+		
