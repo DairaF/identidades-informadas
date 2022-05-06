@@ -18,7 +18,14 @@ if ($slider.length) {
   var updateSliderCounter = function(slick, currentIndex) {
     window.location.hash="#c"+(currentIndex);
     currentSlide = slick.slickCurrentSlide() + 1;
-    slidesCount = slick.slideCount;
+    // marcados = document.getElementsByClassName('highLight');
+    // if(marcados > 0){
+    //   for(i=0; i<marcados.length; i++){
+    //     marcados[i].classList.remove('highLight');
+    //   }
+    // }
+    // document.getElementsById("c"+currentIndex).classList.add('highLight');
+    // slidesCount = slick.slideCount;
     $(sliderCounter).text(currentSlide + ' de ' +slidesCount)
   };
 
@@ -56,7 +63,6 @@ addFunction();
 
 
 function displaySlider (i) {
-  document.getElementById('slideContainer').classList.remove('hide');
     if(window.innerWidth < 980){
     let slider = document.getElementById("slideContainer");
     if(slider.className == "hide"){
