@@ -184,9 +184,8 @@ addAnim("animado1","animacion100","startConfetti");
 		
     
    $('.cierra-comentario').on('click', function(e) {           
-        $(this).parent().addClass('cierra');            
+        $(this).parent().removeClass('visible');            
     });    
-		
  
  
 
