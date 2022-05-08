@@ -370,8 +370,13 @@ aside .sidebar{
 	border-top:4px solid #e6e7e8;	
  z-index:-1;
 }
+
 #slideContainer.z100{
 	z-index:100;
+}
+
+#slideContainer.z-01{
+	z-index:-1;
 }
 
 #sliderControl { 
@@ -443,6 +448,11 @@ aside .sidebar{
 box-shadow: none;
 }
 
+
+
+.pt-mob {
+	padding-top:60px;
+}
 /*------------------------
 DESK
 --------------------------*/

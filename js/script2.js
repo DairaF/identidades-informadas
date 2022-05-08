@@ -198,5 +198,11 @@ addAnim("animado1","animacion100","startConfetti");
     });    
  
  
+ 
+   $('.navbar-toggler').on('click', function(e) {           
+        $('#slideContainer').removeClass('z100');            
+    });    
+ 
+ 
 
 		
