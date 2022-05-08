@@ -377,7 +377,11 @@ aside .sidebar{
     justify-content: center;
 }
  
- 
+.slide.slick-slide p ,
+.slide.slick-slide a
+.slide.slick-slide p a{
+	font-size:16px;
+}
 
 .sliderButtons {
 	position:relative;
