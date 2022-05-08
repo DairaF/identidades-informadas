@@ -643,7 +643,9 @@ section.content {
 	display:block;
 	width:100%;
 }
-
+.pt-mob {
+	padding-top:0px;
+}
 
 }
 
