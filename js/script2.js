@@ -9,24 +9,24 @@ $slider.slick({
 		adaptiveHeight: true
 		
 	});
-	
+
 if ($slider.length) {
   var currentSlide;
   var slidesCount;
   var sliderCounter = $('.slider__counter');
   
   var updateSliderCounter = function(slick, currentIndex) {
-    window.location.hash="#c"+(currentIndex);
     currentSlide = slick.slickCurrentSlide() + 1;
-    // marcados = document.getElementsByClassName('highLight');
-    // if(marcados > 0){
-    //   for(i=0; i<marcados.length; i++){
-    //     marcados[i].classList.remove('highLight');
-    //   }
-    // }
-    // document.getElementsById("c"+currentIndex).classList.add('highLight');
-    // slidesCount = slick.slideCount;
-    $(sliderCounter).text(currentSlide + ' de ' +slidesCount)
+    marked1 = document.getElementsByClassName('highLight')[0] 
+    if(typeof marked1 !== "undefined"){
+      console.log(document.getElementsByClassName('highLight')[0]);
+      document.getElementsByClassName('highLight')[0].classList.remove('highLight');
+    }
+    document.getElementById('c'+currentSlide).classList.add('highLight');
+    //window.location.hash="c"+currentIndex;
+    document.getElementById("c"+currentIndex).scrollIntoView(true);   
+    slidesCount = slick.slideCount;
+    $(sliderCounter).text(currentSlide + ' de ' +slidesCount);
   };
 
   $slider.on('init', function(event, slick) {
