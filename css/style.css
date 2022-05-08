@@ -368,8 +368,11 @@ aside .sidebar{
     bottom: 0%;
     background-color: #f7f5f5;
 	border-top:4px solid #e6e7e8;	
+ z-index:-1;
 }
-
+#slideContainer.z100{
+	z-index:100;
+}
 
 #sliderControl { 
     display: flex;

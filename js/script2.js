@@ -149,16 +149,16 @@ $(function(){
  	 
 });	
 	
- var div_top = $('.navbar-hoja').offset().top;
+ var div_top = $('.navbar-artic').offset().top;
 
 $(window).scroll(function() {
     var window_top = $(window).scrollTop() - 0;
     if (window_top > div_top) {
-        if (!$('.navbar-hoja').is('.sticky')) {
-            $('.navbar-hoja').addClass('sticky');
+        if (!$('.navbar-artic').is('.sticky')) {
+            $('.navbar-artic').addClass('sticky');
         }
     } else {
-        $('.navbar-hoja').removeClass('sticky');
+        $('.navbar-artic').removeClass('sticky');
     }
 });
 
@@ -190,6 +190,11 @@ addAnim("animado1","animacion100","startConfetti");
     
    $('.cierra-comentario').on('click', function(e) {           
         $(this).parent().removeClass('visible');            
+    });    
+ 
+ 
+   $('mark').on('click', function(e) {           
+        $('#slideContainer').addClass('z100');            
     });    
  
  
